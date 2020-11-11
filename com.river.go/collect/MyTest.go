@@ -1,10 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	//数组循环
 	array := [5]string{"a", "b", "c", "d", "e"}
+	array1 := [5]string{}
+	fmt.Println(array1)
 	for i := 0; i < 5; i++ {
 		fmt.Printf("数组索引:%d,对应值:%s\n", i, array[i])
 	}
@@ -29,6 +33,7 @@ func main() {
 	nameAgeMap["frank"] = 90
 	fmt.Println(nameAgeMap)
 	age, ok := nameAgeMap["张飞"]
+
 	fmt.Println(age, ok)
 	delete(nameAgeMap, "river")
 
@@ -45,5 +50,9 @@ func main() {
 	for i, v := range s {
 		fmt.Println(i, v)
 	}
+	fmt.Println("*****************")
+
+	bb := nameAgeMap["张飞"]
+	fmt.Println(bb)
 
 }
