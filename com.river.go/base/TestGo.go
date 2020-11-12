@@ -9,10 +9,12 @@ import (
 func main() {
 	var i int = 10
 	var b bool = false
+	var x, y int
+	fmt.Println(x, y)
 
 	pi := &i
-	formatBool  := strconv.FormatBool(b)
-	fmt.Println("hello river " ,i)
+	formatBool := strconv.FormatBool(b)
+	fmt.Println("hello river ", i)
 	fmt.Println(b)
 	fmt.Println(formatBool)
 	fmt.Println(*pi)
