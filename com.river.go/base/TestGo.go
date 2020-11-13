@@ -2,11 +2,15 @@ package main
 
 import (
 	"fmt"
+	"go-demo/com.river.go/flow"
 	"strconv"
 	"strings"
 )
 
 func main() {
+
+	flow.SayHello()
+
 	var i int = 10
 	var b bool = false
 	var x, y int
@@ -25,4 +29,5 @@ func main() {
 
 	contains := strings.Contains("hello river", "river")
 	fmt.Println(contains)
+
 }
