@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 type person struct {
 	name string
@@ -23,5 +26,6 @@ func main() {
 	 */
 	fmt.Println((*lucyP).name)
 	fmt.Println(lucyP.name)
+	errors.New("")
 
 }
