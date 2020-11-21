@@ -3,7 +3,6 @@ package main
 import (
 	"bytes"
 	"fmt"
-	"os"
 )
 
 func main() {
@@ -15,12 +14,19 @@ func main() {
 	//这个是把一个字符串拼接到Buffer里
 	fmt.Fprint(&b, ",", "http://www.flysnow.org")
 	//把Buffer里的内容打印到终端控制台
-	b.WriteTo(os.Stdout)
+	//	b.WriteTo(os.Stdout)
 
-	var p = [100]byte{'a', 'b', 'c'}
-	var testb = bytes.NewBuffer([]byte{'a', 'b', 'c'})
-	n, err := testb.Read(p[:])
-	fmt.Println("--------->")
-	fmt.Println(n, err, string(p[:n]))
+	p := [100]byte{}
+	fmt.Println(p[0])
+
+	read, err := b.Read(p[:])
+	fmt.Println(string(p[:]), read, err)
+
+	//var p = []byte{'a', 'b', 'c'}
+	//var testb = bytes.NewBuffer([]byte{'a', 'b', 'c'})
+	//testb.ReadFrom(&b)
+	//n, err := testb.Read(p[:])
+	//fmt.Println("--------->")
+	//fmt.Println(n, err, string(p[:n]))
 
 }
