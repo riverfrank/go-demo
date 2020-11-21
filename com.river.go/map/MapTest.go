@@ -18,5 +18,10 @@ func main() {
 	for s, i := range nameMap {
 		fmt.Println(s, i)
 	}
+	nameMap["river"] = 33
+	v, exist := nameMap["river"]
+	if exist {
+		fmt.Println("exist ", v)
+	}
 
 }
